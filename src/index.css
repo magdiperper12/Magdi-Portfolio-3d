@@ -6,4 +6,6 @@
 body {
 	color: white;
 	background: linear-gradient(90deg, rgb(62, 36, 36), rgb(31, 31, 70));
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
