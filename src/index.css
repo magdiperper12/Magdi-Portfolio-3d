@@ -5,7 +5,65 @@
 }
 body {
 	color: white;
-	background: linear-gradient(90deg, rgb(62, 36, 36), rgb(31, 31, 70));
+	background: linear-gradient(to bottom, rgb(24, 22, 54), rgb(23, 23, 73));
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	min-height: 100vh;
+}
+html {
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.container {
+	max-width: 1536px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+section {
+	height: 100vh;
+	scroll-snap-align: center;
+}
+section:nth-child(1) {
+	background-color: rgb(24, 22, 54);
+}
+section:nth-child(2) {
+	background-color: rgb(35, 32, 76);
+}
+section:nth-child(3) {
+	background-color: rgb(40, 37, 88);
+}
+section:nth-child(4) {
+	background-color: rgb(56, 56, 128);
+}
+@media (min-width: 640px) {
+	.container {
+		max-width: 640px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 768px;
+	}
+}
+@media (min-width: 1024px) {
+	.container {
+		max-width: 1024px;
+	}
+}
+@media (min-width: 1280px) {
+	.container {
+		max-width: 1280px;
+	}
+}
+@media (min-width: 1536px) {
+	.container {
+		max-width: 1536px;
+	}
 }

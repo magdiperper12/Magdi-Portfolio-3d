@@ -4,11 +4,19 @@ import Portfolio from './components/portfolio/portfolio';
 import Services from './components/services/services';
 const App = () => {
 	return (
-		<div className=''>
-			<Hero />
-			<Portfolio />
-			<Services />
-			<Contact />
+		<div className='container'>
+			<section id='#home'>
+				<Hero />
+			</section>
+			<section id='#services'>
+				<Services />
+			</section>
+			<section id='#portfolio'>
+				<Portfolio />
+			</section>
+			<section id='#contact'>
+				<Contact />
+			</section>
 		</div>
 	);
 };
