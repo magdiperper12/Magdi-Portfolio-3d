@@ -1,23 +1,32 @@
-import './services.css';
 import { Canvas } from '@react-three/fiber';
+import './services.css';
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
 function Services() {
 	return (
 		<div>
-			<div id='canvas-container'>
+			<div
+				style={{
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					height: '100vh',
+				}}>
 				<Canvas>
 					<mesh>
-						<boxGeometry args={[2, 2, 2]} />
-						<meshPhongMaterial />
+						<Sphere
+							args={[1.1, 150, 250]}
+							scale={2}>
+							<MeshDistortMaterial
+								color='#FBF'
+								attach='material'
+								distort={0.5}
+								speed={2}
+							/>
+						</Sphere>
+						<ambientLight intensity={1} />
+						<directionalLight position={[5, 4, 1]} />
+						<OrbitControls enableZoom='false' />
 					</mesh>
-					<ambientLight intensity={0.1} />
-					<directionalLight
-						position={[0, 0, 5]}
-						color='red'
-					/>
-					<orbitControls
-						ref={orbitControlsRef}
-						args={[camera, gl.domElement]}
-					/>
 				</Canvas>
 			</div>
 		</div>
