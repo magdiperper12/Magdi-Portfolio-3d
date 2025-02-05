@@ -2,11 +2,11 @@ import './hero.css';
 import { CiDesktopMouse2 } from 'react-icons/ci';
 import Speech from './Speech';
 import { BsArrowUp } from 'react-icons/bs';
-import { motion } from 'motion/react';
+import { motion, useInView } from 'motion/react';
 import Shape from './shape';
 import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react';
-import { TbZoomInFilled } from 'react-icons/tb';
+import { Suspense, useRef } from 'react';
+
 const awardsvaraints = {
 	initial: { x: -100, opacity: 0 },
 	animate: {
@@ -24,8 +24,12 @@ const followvariants = {
 	},
 };
 function Hero() {
+	const ref = useRef();
+	const isview = useInView(ref, { margin: '-200px' });
 	return (
-		<div className='hero'>
+		<div
+			className='hero'
+			ref={ref}>
 			<div className='hSecttion left'>
 				{/*title*/}
 				<motion.h1
@@ -39,8 +43,7 @@ function Hero() {
 				{/*awards*/}
 				<motion.div
 					variants={awardsvaraints}
-					initial='initial'
-					animate='animate'
+					animate={isview ? 'animate' : 'initial'}
 					className='awards'>
 					<motion.h1 variants={awardsvaraints}>Frontend Developer</motion.h1>
 					<motion.p variants={awardsvaraints}>
@@ -78,8 +81,7 @@ function Hero() {
 				<motion.div
 					className='follow'
 					variants={followvariants}
-					initial='initial'
-					animate='animate'>
+					animate={isview ? 'animate' : 'initial'}>
 					<motion.a
 						variants={followvariants}
 						href='/'>

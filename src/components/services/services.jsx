@@ -4,6 +4,7 @@ import './services.css';
 import { motion, useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import HumanContainer from './robot/HumanContainer';
+import Conter from './counter';
 
 const textVariants = {
 	initial: {
@@ -58,7 +59,7 @@ const services = [
 ];
 
 const Services = () => {
-	const [currentServiceId, setCurrentServiceId] = useState(1);
+	const [select, setSelect] = useState(1);
 	const ref = useRef();
 	const isInView = useInView(ref, { margin: '-200px' });
 	return (
@@ -81,7 +82,7 @@ const Services = () => {
 							variants={listVariants}
 							className='service'
 							key={service.id}
-							onClick={() => setCurrentServiceId(service.id)}>
+							onClick={() => setSelect(service.id)}>
 							<div className='serviceIcon'>
 								<img
 									src={service.img}
@@ -95,14 +96,26 @@ const Services = () => {
 						</motion.div>
 					))}
 				</motion.div>
+				<div className='counterList'>
+					<Conter
+						from={0}
+						to={148}
+						text={'Project Complate'}
+					/>
+					<Conter
+						from={0}
+						to={67}
+						text={'Happy Clients'}
+					/>
+				</div>
 			</div>
 			<div className='sSection right'>
-				{currentServiceId === 1 ? (
+				{select === 1 ? (
 					<HumanContainer />
-				) : currentServiceId === 2 ? (
-					<MugModelContainer />
-				) : (
+				) : select === 2 ? (
 					<ComputerModelContainer />
+				) : (
+					<MugModelContainer />
 				)}
 			</div>
 		</div>
