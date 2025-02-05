@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import Shape from './shape';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
+import { TbZoomInFilled } from 'react-icons/tb';
 const awardsvaraints = {
 	initial: { x: -100, opacity: 0 },
 	animate: {
@@ -162,7 +163,9 @@ function Hero() {
 					</div>
 				</motion.a>
 			</div>
-			<div className='bg '>
+			<div
+				className='bg '
+				style={{ zIndex: -1 }}>
 				{/* 3d */}
 				<Canvas>
 					<mesh>
