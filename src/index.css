@@ -36,6 +36,23 @@ section:nth-child(3) {
 	height: auto;
 }
 
+.Title {
+	font-size: 70px;
+	font-weight: 700;
+	height: 14vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: sticky;
+	top: 0%;
+}
+
+.Title span {
+	color: rgb(126, 124, 222);
+	margin-left: 14px;
+}
+
 @media (min-width: 640px) {
 	.container {
 		max-width: 640px;

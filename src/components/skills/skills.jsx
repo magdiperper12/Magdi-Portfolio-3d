@@ -17,8 +17,7 @@ import {
 } from 'react-icons/si';
 import { TbDeviceDesktop, TbRotate3D } from 'react-icons/tb';
 import { MdAnimation } from 'react-icons/md';
-import { motion, useInView } from 'motion/react';
-import { useRef } from 'react';
+
 const skills = [
 	{
 		category: 'Languages',
@@ -61,89 +60,31 @@ const skills = [
 ];
 
 const Skills = () => {
-	const ref = useRef();
-	const isInView = useInView(ref, { margin: '-300px' });
-
-	const listVariant = {
-		initial: {
-			x: 100,
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				duration: 0.7,
-				staggerChildren: 0.4,
-			},
-		},
-	};
-	const secound = {
-		initial: {
-			x: 100,
-			y: -100,
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			y: 0,
-			opacity: 1,
-			transition: {
-				duration: 0.7,
-				staggerChildren: 0.4,
-			},
-		},
-	};
-
 	return (
-		<>
-			<motion.div
-				className='skills-container'
-				ref={ref}
-				variants={listVariant}
-				initial='initial'
-				animate={isInView ? 'animate' : 'initial'}>
-				<motion.h1
-					className='skills-title'
-					variants={listVariant}>
-					My <span>Skills</span>
-				</motion.h1>
-				<motion.div
-					className='skills-grid'
-					ref={ref}
-					variants={listVariant}
-					initial='initial'
-					animate={isInView ? 'animate' : 'initial'}>
-					{skills.map((skill) => (
-						<motion.div
-							variants={listVariant}
-							key={skill.category}
-							className='skill-category'>
-							<motion.h2>{skill.category}</motion.h2>
-							<motion.div
-								className='skill-list'
-								variants={secound}
-								initial='initial'
-								animate={isInView ? 'animate' : 'initial'}>
-								{skill.items.map((item, index) => (
-									<motion.div
-										key={index}
-										className='skill-box'
-										variants={secound}>
-										<motion.div
-											className='icon'
-											variants={secound}>
-											{item.icon}
-										</motion.div>
-										<motion.span variants={secound}>{item.name}</motion.span>
-									</motion.div>
-								))}
-							</motion.div>
-						</motion.div>
-					))}
-				</motion.div>
-			</motion.div>
-		</>
+		<div className='skills-container'>
+			<h1 className='skills-title'>
+				My <span>Skills</span>
+			</h1>
+			<div className='skills-grid'>
+				{skills.map((skill) => (
+					<div
+						key={skill.category}
+						className='skill-category'>
+						<h2>{skill.category}</h2>
+						<div className='skill-list'>
+							{skill.items.map((item, index) => (
+								<div
+									key={index}
+									className='skill-box'>
+									<div className='icon'>{item.icon}</div>
+									<span>{item.name}</span>
+								</div>
+							))}
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
 	);
 };
 

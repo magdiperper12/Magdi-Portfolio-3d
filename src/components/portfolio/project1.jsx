@@ -6,7 +6,7 @@ const Project1 = () => {
 			<Project
 				name={'botbat'}
 				desc={
-					'Dopefolio is a successful Open-Source project that I created which have been featured on some of the biggest tech sites like CSS-Tricks,Getsby , Hostinger, etc & used by thousands of developers globally'
+					'"botbat" is a lightweight AI-powered chatbot web app built using modern web technologies. It features real-time conversation handling, a clean UI, and responsive design. The project showcases how to integrate chatbot logic into a simple and effective frontend experience.'
 				}
 				image='/botbat.PNG'
 				live={'https://bat-chat.surge.sh/'}

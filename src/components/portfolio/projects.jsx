@@ -1,66 +1,32 @@
 import './project.css';
-import { motion, useInView } from 'motion/react';
-import { useRef } from 'react';
 import { FaEye, FaGithub } from 'react-icons/fa';
 
 const Project = ({ name, desc, image, live, github }) => {
-	const ref = useRef();
-	const isInView = useInView(ref, { margin: '-300px' });
-
-	const listVariant = {
-		initial: {
-			x: 100,
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				duration: 0.7,
-				staggerChildren: 0.4,
-			},
-		},
-	};
-
 	return (
-		<motion.div
-			className='project'
-			ref={ref}
-			variants={listVariant}
-			initial='initial'
-			animate={isInView ? 'animate' : 'initial'}>
-			<motion.img
+		<div className='project '>
+			<img
 				src={image}
 				loading='lazy'
-				variants={listVariant}
 			/>
-			<motion.div
-				className='desc'
-				variants={listVariant}
-				initial='initial'
-				animate={isInView ? 'animate' : 'initial'}>
-				<motion.h1 variants={listVariant}>{name}</motion.h1>
-				<motion.p variants={listVariant}>{desc}</motion.p>
-				<motion.div
-					variants={listVariant}
-					className='btn'>
-					<motion.a
+			<div className='desc'>
+				<h1>{name}</h1>
+				<p>{desc}</p>
+				<div className='btn'>
+					<a
 						className='anchor'
 						target='_blank'
-						href={live}
-						variants={listVariant}>
+						href={live}>
 						Live <FaEye />
-					</motion.a>
-					<motion.a
+					</a>
+					<a
 						className='anchor'
 						href={github}
-						target='_blank'
-						variants={listVariant}>
+						target='_blank'>
 						Github <FaGithub />
-					</motion.a>
-				</motion.div>
-			</motion.div>
-		</motion.div>
+					</a>
+				</div>
+			</div>
+		</div>
 	);
 };
 

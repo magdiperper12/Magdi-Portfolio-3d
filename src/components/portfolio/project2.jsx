@@ -7,7 +7,7 @@ const Project2 = () => {
 				<Project
 					name={'Football-Historic'}
 					desc={
-						'by using next js , api , tailwind and typescript make this website have all information about football whith ai chating and fan zone and historic of all football club and player and you can see also place for shopping'
+						'"Football-Historic" is a rich football platform built using Next.js, TypeScript, Tailwind CSS, and public APIs. It offers historical data about football clubs and players, an AI-powered chat assistant, a dedicated fan zone, and an integrated shopping section — delivering a complete and interactive football experience.'
 					}
 					image='/historic.PNG'
 					live={'https://historic.vercel.app/'}

@@ -6,7 +6,7 @@ const Project3 = () => {
 			<Project
 				name={'Social Media'}
 				desc={
-					'by using next js , tailwind and typescript make this website are a social media website that have all the feature of social media like post , comment , like and followin also have notification and stories'
+					'This is a fully functional social media web application built with Next.js, Tailwind CSS, and TypeScript. It includes all core features such as user posts, comments, likes, following system, notifications, and stories — delivering a modern and interactive social experience.'
 				}
 				image='/social.PNG'
 				live={'https://social-midea.vercel.app/'}

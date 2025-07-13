@@ -6,7 +6,7 @@ const Project4 = () => {
 			<Project
 				name={'E-commerce'}
 				desc={
-					'by using next js , tailwind ,api and typescript make this website are a e-commerce website that have all the feature of e-commerce like cart, payement,product and and shopping place'
+					'This is a full-featured E-commerce website built using Next.js, Tailwind CSS, TypeScript, and REST APIs. The platform includes essential shopping features such as product listings, shopping cart, payment integration, and a responsive user interface designed for a smooth shopping experience.'
 				}
 				image='/commerce.PNG'
 				live={'https://e-commerce-h3ex0he57-magdis-projects.vercel.app/'}
