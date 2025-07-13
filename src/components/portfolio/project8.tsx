@@ -6,7 +6,7 @@ const Project8 = () => {
 			<Project
 				name={'Abo Nawas'}
 				desc={
-					'"Abo Nawas" is a modern restaurant website built to showcase the menu, services, and ambiance of the brand. It features a responsive and elegant design, smooth navigation, and performance-optimized pages. The site also includes sections for reservations, contact, and location, offering a complete online presence for the business.'
+					'Abo Nawas Metalworks Website A modern, responsive website for a company specializing in wrought iron, decorative metalwork, and custom steel designs. The site showcases services, craftsmanship, and a project gallery, with smooth navigation and integrated client contact options.'
 				}
 				image='/nawas.PNG'
 				live={'https://abo-nawas.vercel.app/'}
