@@ -20,35 +20,11 @@ const listVariant = {
 };
 
 const Contact = () => {
-	// const [success, setSuccess] = useState(false);
-	// const [error, setError] = useState(false);
-
 	const ref = useRef();
 	const form = useRef();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-
-		// emailjs
-		// 	.sendForm(
-		// 		import.meta.env.VITE_SERVICE_ID,
-		// 		import.meta.env.VITE_TEMPLATE_ID,
-		// 		form.current,
-		// 		{
-		// 			publicKey: import.meta.env.VITE_PUBLIC_KEY,
-		// 		}
-		// 	)
-		// 	.then(
-		// 		() => {
-		// 			setSuccess(true);
-		// 			setError(false);
-		// 		},
-		// 		(error) => {
-		// 			console.log(error);
-		// 			setError(true);
-		// 			setSuccess(false);
-		// 		}
-		// 	);
 	};
 
 	const isInView = useInView(ref, { margin: '-200px' });
@@ -102,8 +78,6 @@ const Contact = () => {
 						className='formButton'>
 						Send
 					</motion.button>
-					{/* {success && <span>Your message has been sent!</span>}
-					{error && <span>Something went wrong!</span>} */}
 				</motion.form>
 			</div>
 			<div className='cSection'>

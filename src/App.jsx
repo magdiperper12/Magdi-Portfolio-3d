@@ -26,13 +26,10 @@ const App = () => {
 			<section>
 				<Skills id='#skills' />
 			</section>
-			{/*project sections */}
 			<section id='#Project1'>
 				<h1 className='Title'>
 					Professional <span>Experiance</span>
 				</h1>
-			</section>
-			<section id='#Project1'>
 				<Project1 />
 			</section>
 			<section id='#Project7'>
@@ -50,12 +47,10 @@ const App = () => {
 			<section id='#Project9'>
 				<Project9 />
 			</section>
-			<section id='#Project1'>
+			<section id='#Project3'>
 				<h1 className='Title'>
 					Personal <span>Projects</span>
 				</h1>
-			</section>
-			<section id='#Project3'>
 				<Project3 />
 			</section>
 			<section id='#Project11'>

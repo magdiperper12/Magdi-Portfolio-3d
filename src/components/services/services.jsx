@@ -1,9 +1,7 @@
 import ComputerModelContainer from './mac/ComputerModelContainer';
-import MugModelContainer from './mug/MugModelContainer';
 import './services.css';
 import { motion, useInView } from 'motion/react';
-import { useRef, useState } from 'react';
-import HumanContainer from './robot/HumanContainer';
+import { useRef } from 'react';
 import Conter from './counter';
 
 const textVariants = {
@@ -59,7 +57,6 @@ const services = [
 ];
 
 const Services = () => {
-	const [select, setSelect] = useState(1);
 	const ref = useRef();
 	const isInView = useInView(ref, { margin: '-200px' });
 	return (
@@ -81,8 +78,7 @@ const Services = () => {
 						<motion.div
 							variants={listVariants}
 							className='service'
-							key={service.id}
-							onClick={() => setSelect(service.id)}>
+							key={service.id}>
 							<div className='serviceIcon'>
 								<img
 									src={service.img}
@@ -111,13 +107,7 @@ const Services = () => {
 				</div>
 			</div>
 			<div className='sSection right'>
-				{select === 1 ? (
-					<ComputerModelContainer />
-				) : select === 2 ? (
-					<HumanContainer />
-				) : (
-					<MugModelContainer />
-				)}
+				<ComputerModelContainer />
 			</div>
 		</div>
 	);
